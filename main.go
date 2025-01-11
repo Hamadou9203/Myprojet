@@ -8,5 +8,15 @@ func main() {
  r.GET("/myapp", func(c *gin.Context) {
    c.JSON(http.StatusOK, gin.H{
      "ringover": "is awesome",
-}) })
-r.Run() }
+}) 
+// ajout d'une route healthcheck
+r.GET("/healthcheck", func(c *gin.Context) {
+  c.JSON(http.StatusOK, gin.H{
+    "message": "i'm alive",
+    "date": time.Now().UTC().Format(time.RFC3339),
+})
+
+
+})
+r.Run() 
+}
