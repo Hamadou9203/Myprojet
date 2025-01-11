@@ -1,6 +1,7 @@
 package main
 import (
  "net/http"
+ "time"
  "github.com/gin-gonic/gin"
 )
 func main() {
@@ -9,6 +10,7 @@ func main() {
    c.JSON(http.StatusOK, gin.H{
      "ringover": "is awesome",
 }) 
+})
 // ajout d'une route healthcheck
 r.GET("/healthcheck", func(c *gin.Context) {
   c.JSON(http.StatusOK, gin.H{
