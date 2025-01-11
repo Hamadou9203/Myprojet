@@ -1,0 +1,22 @@
+---
+- name: Déployer et exécuter le conteneur Docker rootless
+  hosts: localhost
+  become: false  # Ne pas utiliser sudo (rootless)
+ 
+- name: Construire l'image Docker si elle n'existe pas
+  docker_image:
+    build:
+      path: "Dockerfile"
+      tag: mon-app-go
+    force: yes
+
+- name: Exécuter le conteneur Docker en mode rootless
+  docker_container:
+    name: mon-app-go-container
+    image: mon-app-go
+    state: started
+    restart_policy: always
+    command: "/workerapp"
+    ports:
+      - "8080:8080"
+

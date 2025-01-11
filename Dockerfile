@@ -2,7 +2,8 @@ FROM golang AS worker
 
 WORKDIR /app
 
-COPY . .
+COPY Go/* .
+
 
 RUN go mod tidy
 
