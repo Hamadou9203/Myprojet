@@ -24,6 +24,6 @@ solution 2
 utiliser un  provider cloud  par exemple AWS et deployer l'application a travers les regions  avec AWS ECS 
 
 # question 9
- Centreon 
- prometheus et Grafana
+ Centreon  avec une gestion centralisé des poller et une supervision sur toutes les machines et containers avec des plugins 
+ prometheus pour collectionner les metriques en temps réel et Grafana pour le graphique
 
