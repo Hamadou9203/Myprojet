@@ -3,14 +3,14 @@
   hosts: localhost
   become: false  
  
-- name: Construire l'image Docker si elle n'existe pas
+- name: Construire l'image Docker 
   docker_image:
     build:
       path: "Dockerfile"
       tag: mon-app-go
     force: yes
 
-- name: Exécuter le conteneur Docker en mode rootless
+- name: Exécuter le conteneur Docker 
   docker_container:
     name: mon-app-go-container
     image: mon-app-go
