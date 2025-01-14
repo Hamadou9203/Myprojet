@@ -1,7 +1,7 @@
 ---
-- name: Déployer et exécuter le conteneur Docker rootless
+- name: Déployer et exécuter le conteneur Docker 
   hosts: localhost
-  become: false  # Ne pas utiliser sudo (rootless)
+  become: false  
  
 - name: Construire l'image Docker si elle n'existe pas
   docker_image:
