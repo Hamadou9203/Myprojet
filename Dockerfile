@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY Go/* .
 
-#telecharger les dependences 
+#telecharger les dependances 
 RUN go mod tidy
 
 RUN go build -o workerapp .
