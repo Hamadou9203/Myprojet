@@ -15,4 +15,4 @@ COPY --from=worker /app/workerapp /workerapp
 
 EXPOSE 8080
 
-CMD ["workerapp"]
+CMD ["/workerapp"]
