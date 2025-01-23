@@ -1,4 +1,4 @@
-# TestTech
+# Tech
 
 prerequis 
 installation docker 
