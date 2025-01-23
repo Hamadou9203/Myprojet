@@ -1,6 +1,8 @@
 # Étape 1 : Construction de l'application Go
 FROM golang:1.23 AS builder
 
+LABEL maintainer="Hamadou"
+
 WORKDIR /app
 
 # Copier tous les fichiers Go dans l'image
